@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/fullNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome Completo"
+            android:inputType="textPersonName" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/mailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/shouldJoinMailListCheckBox"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/shouldJoinMailListLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingressar na lista de e-mails?"
+                android:textAlignment="textStart" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone: (00) 00000-0000"
+            android:inputType="phone" />
+
+        <RadioGroup
+            android:id="@+id/phoneRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/commercialPhoneRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comercial" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <RadioButton
+                android:id="@+id/residentialPhoneRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Residencial" />
+
+        </RadioGroup>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <TextView
+            android:id="@+id/hasCellphoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar número de celular?"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/addCellPhoneNumberRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/addCellPhoneNumberRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <RadioButton
+                android:id="@+id/notAddCellPhoneNumberRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não" />
+
+        </RadioGroup>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/cellPhoneNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Celular"
+            android:inputType="phone"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/genderRadioGroup"
+            android:text="Sexo"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maleGenderRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <RadioButton
+                android:id="@+id/femaleGenderRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feminino" />
+
+        </RadioGroup>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/birthDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Nascimento"
+            android:inputType="date" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:id="@+id/educationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/educationSpinner"
+            android:text="Formação"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/educationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/education" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/graduationYearInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ano de Conclusão"
+            android:visibility="gone"
+            android:inputType="numberSigned" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/institutionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Instituição"
+            android:visibility="gone"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/monographInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo de Monografia"
+            android:visibility="gone"
+            android:inputType="text" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/vacancyInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vaga de interesse"
+            android:inputType="text" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="24dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Limpar"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salvar" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
